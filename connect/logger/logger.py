@@ -31,7 +31,7 @@ def function_log(custom_logger=None):
         @wraps(func)
         def wrapper(self, *args, **kwargs):
             custom_logger.info('Entering: %s', func.__name__)
-            custom_logger.debug('Function params: {} {}'.format(args, kwargs))
+            custom_logger.debug(u'Function params: {} {}'.format(args, kwargs))
             result = func(self, *args, **kwargs)
             custom_logger.debug(
                 'Function `{}.{}` return: {}'.format(
